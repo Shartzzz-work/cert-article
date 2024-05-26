@@ -1,0 +1,77 @@
+:root {
+  --c-white: white;
+  --c-black: black;
+
+  --c-text-dark: var(--c-black);
+  --c-text-light: var(--c-white);
+  --c-text: var(--c-text-dark);
+
+  --c-bg: var(--c-white);
+
+  --edges: 20px;
+  --edges-middle: 10vw;
+
+  --w-container: 1487px;
+  --w-container-s: 1270px;
+
+  --w-wrapper: min(
+    var(--w-container),
+    100vw - max(calc(var(--edges) * 2), var(--edges-middle))
+  );
+  --w-wrapper-s: min(
+    var(--w-container-s),
+    100vw - max(calc(var(--edges) * 2), var(--edges-middle))
+  );
+
+  color: var(--c-text);
+  background-color: var(--c-bg);
+
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  text-rendering: optimizeSpeed;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100svh;
+  font-size: 100%;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+
+  &[role] {
+    list-style: none;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+button {
+  cursor: pointer;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
